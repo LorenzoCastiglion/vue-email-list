@@ -16,19 +16,23 @@
 <body>
     
     <div id="app">
-        <div>
+        
+            <div class=" wrapper container d-flex flex-column justify-content-center align-items-center m-auto align-content-center">
             
-            <ul v-if="mails.length >= 10">
-                <li v-for="email in mails">
-                
-                    {{email}}
-                </li>
-            </ul>
-        </div>
+                <ul  v-if="mails.length >= 10">
+                    <li v-for="email in mails">
+            
+                        {{email}}
+                    </li>
+                </ul>
+                <div>
+                    <button @click="rndArr(mails)">Genera Mail</button>
+                    <button @click="cleanArr()">Clear-All</button>
+                </div>
+            </div>
+        
     
-        <button @click="rndArr(mails)">Genera Mail</button>
-    
-        <button @click="cleanArr()">Clear-All</button>
+       
     </div>
 
     
